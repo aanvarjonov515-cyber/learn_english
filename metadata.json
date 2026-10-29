@@ -1,0 +1,6 @@
+{
+  "name": "English Teacher AI",
+  "description": "O'zbek tilida so'zlashuvchi foydalanuvchilar uchun sun'iy intellekt asosidagi interaktiv ingliz tili o'rganish platformasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

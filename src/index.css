@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-bg: var(--app-bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-primary-bg: var(--primary-bg);
+  --color-primary-text: var(--primary-text);
+  --color-primary-hover: var(--primary-hover);
+  --color-selected-bg: var(--selected-bg);
+  --color-selected-text: var(--selected-text);
+  --color-input-bg: var(--input-bg);
+  --color-input-text: var(--input-text);
+  --color-placeholder: var(--placeholder);
+}
+
+@layer base {
+  :root {
+    --app-bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-muted: #F1F5F9;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --border: #CBD5E1;
+    --primary-bg: #0F766E;
+    --primary-text: #FFFFFF;
+    --primary-hover: #115E59;
+    --selected-bg: #CCFBF1;
+    --selected-text: #115E59;
+    --input-bg: #FFFFFF;
+    --input-text: #0F172A;
+    --placeholder: #64748B;
+    --disabled-bg: #E2E8F0;
+    --disabled-text: #475569;
+
+    --bg-primary: var(--app-bg);
+    --bg-surface: var(--surface);
+    --bg-elevated: var(--surface-muted);
+    --border-color: var(--border);
+    --primary-teal: var(--primary-bg);
+    --primary-teal-hover: var(--primary-hover);
+  }
+
+  html.dark, html[data-theme="dark"] {
+    --app-bg: #0F172A;
+    --surface: #1E293B;
+    --surface-muted: #334155;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --border: #64748B;
+    --primary-bg: #0F766E;
+    --primary-text: #FFFFFF;
+    --primary-hover: #115E59;
+    --selected-bg: #134E4A;
+    --selected-text: #CCFBF1;
+    --input-bg: #0F172A;
+    --input-text: #F8FAFC;
+    --placeholder: #94A3B8;
+    --disabled-bg: #334155;
+    --disabled-text: #CBD5E1;
+
+    --bg-primary: var(--app-bg);
+    --bg-surface: var(--surface);
+    --bg-elevated: var(--surface-muted);
+    --border-color: var(--border);
+    --primary-teal: var(--primary-bg);
+    --primary-teal-hover: var(--primary-hover);
+  }
+
+  body {
+    background-color: var(--app-bg);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Focus ring accessibility */
+  *:focus-visible {
+    outline: 2px solid var(--primary-bg);
+    outline-offset: 2px;
+  }
+}
+
+/* Reader modes coexistence */
+.reader-mode-warm {
+  background-color: #FAF6EE !important;
+  color: #2D2A26 !important;
+}
+
+.reader-mode-night {
+  background-color: #121212 !important;
+  color: #E0E0E0 !important;
+}
+
+.reader-mode-light {
+  background-color: #FFFFFF !important;
+  color: #1A1A1A !important;
+}
